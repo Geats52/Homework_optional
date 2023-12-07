@@ -1,15 +1,16 @@
 ﻿//Задача 1: Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
 
-int n = int.Parse(Console.ReadLine()!);
-
-if (n % 7 == 0)
+void OneAndTwo(int num)
 {
-    if (n % 23 == 0)
-        Console.WriteLine("Найденно число!");
+    if(num % 7 == 0 && num % 23 == 0)
+    {
+        Console.WriteLine($"{num} -> yes");
+    }
     else
-        Console.WriteLine("Число не найденно");
-
+    {
+        Console.WriteLine($"{num} -> no");
+    }
 }
 
-else
-    Console.WriteLine("Число не найденно");
+int result = int.Parse(Console.ReadLine()!);
+OneAndTwo(result);
