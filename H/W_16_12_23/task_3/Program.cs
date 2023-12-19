@@ -26,7 +26,7 @@ int[,] MassNums(int row, int column,int from, int to)
     return arr;
 }
 
-string SumNum(int[,] arr)
+int[] SumNum(int[,] arr)
 {
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
@@ -43,7 +43,7 @@ string SumNum(int[,] arr)
 }
 
 
-string FindMin(int[,] arr)
+void FindMin(int[] arr)
 {
     int min_ind = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -66,5 +66,5 @@ int stop = int.Parse(Console.ReadLine()!);
 int[,] mass = MassNums(row_num, column_num, start, stop);
 Print(mass);
 
-int[] mass_sum = SumNums(mass);
+int[] mass_sum = SumNum(mass);
 FindMin(mass_sum);
