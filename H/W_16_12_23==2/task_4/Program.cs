@@ -2,20 +2,49 @@
 
 //НЕРЕШЕННО
 
-void Main(string[] args)
+string PharseRev(char[] arr)
 {
-    string input = "Hello my world";
-    string result = ReverseWords(input);
-    Console.WriteLine(result);
-}
-public static string ReverseWords(string str)
-{
-    string[] words = str.Split(' ');
-    Array.Reverse(words);
-    return string.Join(" ", words);
+    string some = "";
+    string rev_pharse= "";
+
+    foreach (var item in word)
+    {
+        if (item != ' ')
+            some += item;
+        else
+            {
+                rev_pharse = some + " " + rev_pharse;
+                some = " ";
+
+            }
+    }
+    rev_pharse = some + " " + rev_pharse;
+    return result;
 }
 
-Main();
+Console.Write("Enter some text: ");
+string text = Console.ReadLine()!;
+
+string res = PharseRev(text);
+Console.Write(res);
+
+
+
+// мое неправильное решение:
+// void Main(string[] args)
+// {
+//     string input = "Hello my world";
+//     string result = ReverseWords(input);
+//     Console.WriteLine(result);
+// }
+// public static string ReverseWords(string str)
+// {
+//     string[] words = str.Split(' ');
+//     Array.Reverse(words);
+//     return string.Join(" ", words);
+// }
+
+// Main();
 
 
 
