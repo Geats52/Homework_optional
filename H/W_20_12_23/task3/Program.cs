@@ -1,21 +1,19 @@
 ﻿//Задача 3: Задайте произвольный массив. Выведете его элементы, начиная с конца. Использовать рекурсию, не использовать циклы.
 
-int Rev(int[] array, int len) {
-  if (len < 0) 
-  {
-return 0;
-  } 
-  else
-  {
-    array[len];
-    Rev(array, len-1);
-    cout <- array[len] <- "\n";
-  }
+class Program
+{
+static void Main()
+{
+int[] array = { 1, 2, 3, 4, 5 };
+PrintArrayReverse(array, array.Length - 1);
 }
-int main() {
-  int[] arr = {42, 23, 16, 15, 8, 4};
 
-Rev(arr, 5);
-
-  return 0;
+static void PrintArrayReverse(int[] arr, int index)
+{
+    if (index >= 0)
+    {
+        Console.WriteLine(arr[index]);
+        PrintArrayReverse(arr, index - 1);
+    }
+}
 }
